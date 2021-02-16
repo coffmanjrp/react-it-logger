@@ -1,4 +1,6 @@
 import { useEffect } from 'react';
+import { Provider } from 'react-redux';
+import store from './store';
 import { AddBtn, SearchBar } from './components/layout';
 import { AddLogModal, EditLogModal, Logs } from './components/logs';
 import { AddTechModal, TechListModal } from './components/techs';
@@ -13,17 +15,19 @@ const App = () => {
   }, []);
 
   return (
-    <>
-      <SearchBar />
-      <div className="container">
-        <AddBtn />
-        <AddLogModal />
-        <EditLogModal />
-        <AddTechModal />
-        <TechListModal />
-        <Logs />
-      </div>
-    </>
+    <Provider store={store}>
+      <>
+        <SearchBar />
+        <div className="container">
+          <AddBtn />
+          <AddLogModal />
+          <EditLogModal />
+          <AddTechModal />
+          <TechListModal />
+          <Logs />
+        </div>
+      </>
+    </Provider>
   );
 };
 
