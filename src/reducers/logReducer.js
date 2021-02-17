@@ -7,6 +7,7 @@ import {
   UPDATE_LOG,
   SET_LOADING,
   LOGS_ERROR,
+  SEARCH_LOGS,
 } from '../actions/types';
 
 const initialState = {
@@ -63,6 +64,11 @@ const logReducer = (state = initialState, action) => {
       return {
         ...state,
         error: action.payload,
+      };
+    case SEARCH_LOGS:
+      return {
+        ...state,
+        logs: action.payload,
       };
     default:
       return state;
