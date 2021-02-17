@@ -46,9 +46,14 @@
       "lastName": "Wilson"
     },
     {
+      "firstName": "Greg ",
+      "lastName": "Haris",
+      "id": 5
+    },
+    {
       "firstName": "Paul",
-      "lastName": "Coffman Jr.",
-      "id": 4
+      "lastName": "Coffman jr",
+      "id": 6
     }
   ]
 }
